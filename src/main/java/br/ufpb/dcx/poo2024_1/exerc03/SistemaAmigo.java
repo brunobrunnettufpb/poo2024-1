@@ -9,7 +9,7 @@ public class SistemaAmigo {
     private List<Amigo> amigos;
 
     public void cadastraAmigo(String nomeAmigo, String emailAmigo) {
-
+        amigos.add(new Amigo(nomeAmigo, emailAmigo, ""));
     }
     public Amigo pesquisaAmigo(String emailAmigo) {
         for (Amigo amigo: amigos) {
