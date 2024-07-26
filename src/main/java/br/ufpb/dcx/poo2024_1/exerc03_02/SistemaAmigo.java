@@ -1,8 +1,8 @@
-package br.ufpb.dcx.poo2024_1.exerc03;
+package br.ufpb.dcx.poo2024_1.exerc03_02;
 
 import java.util.ArrayList;
 import java.util.List;
-import br.ufpb.dcx.poo2024_1.exerc03.Exceptions.*;
+import br.ufpb.dcx.poo2024_1.exerc03_02.Exceptions.*;
 
 public class SistemaAmigo {
     private List<Mensagem> mensagens = new ArrayList<>();

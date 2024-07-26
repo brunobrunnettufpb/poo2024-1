@@ -1,4 +1,4 @@
-package br.ufpb.dcx.poo2024_1.exerc03;
+package br.ufpb.dcx.poo2024_1.exerc03_02;
 
 public class Amigo {
     private String nome;
