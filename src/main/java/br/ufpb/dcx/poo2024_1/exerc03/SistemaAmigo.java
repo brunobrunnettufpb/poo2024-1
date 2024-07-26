@@ -5,8 +5,8 @@ import java.util.List;
 import br.ufpb.dcx.poo2024_1.exerc03.Exceptions.*;
 
 public class SistemaAmigo {
-    private List<Mensagem> mensagens;
-    private List<Amigo> amigos;
+    private List<Mensagem> mensagens = new ArrayList<>();
+    private List<Amigo> amigos = new ArrayList<>();
 
     public void cadastraAmigo(String nomeAmigo, String emailAmigo) {
         amigos.add(new Amigo(nomeAmigo, emailAmigo, ""));
@@ -20,16 +20,18 @@ public class SistemaAmigo {
     }
 
     public void enviarMensagemParaTodos(String texto, String emailRemetente, boolean ehAnonima) {
-
+        Mensagem msg = new MensagemParaTodos(texto, emailRemetente, ehAnonima);
+        mensagens.add(msg);
     }
 
     public void enviarMensagemParaAlguem(String texto, String emailRemetente, String emailDestinatario, boolean ehAnonima) {
-
+        Mensagem msg = new MensagemParaAlguem(texto, emailRemetente, emailDestinatario, ehAnonima);
+        mensagens.add(msg);
     }
 
     public List<Mensagem> pesquisaMensagensAnonimas() {
         List<Mensagem> msgsAnonimas = new ArrayList<>();
-        for (Mensagem msg: mensagens) {
+        for (Mensagem msg: this.mensagens) {
             if (msg.ehAnonima()) msgsAnonimas.add(msg);
         }
 
@@ -54,5 +56,10 @@ public class SistemaAmigo {
         if (amigo1 == null) throw new AmigoInexistenteException(emailDaPessoa + " não cadastrado!");
 
         return amigo1.getEmailAmigoSorteado();
+    }
+
+    @Override
+    public String toString() {
+        return "O sistema possui " + this.amigos.size() + " amigos cadastrados e " + this.mensagens.size() + " mensagens enviadas.";
     }
 }

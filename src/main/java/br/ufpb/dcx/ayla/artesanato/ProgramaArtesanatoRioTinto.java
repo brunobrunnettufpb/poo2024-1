@@ -25,7 +25,7 @@ public class ProgramaArtesanatoRioTinto {
                     JOptionPane.showMessageDialog(null, "Item cadastrado com sucesso: " + item.toString());
                 }
                 else {
-                    JOptionPane.showMessageDialog(null, );
+                    JOptionPane.showMessageDialog(null, "");
                 }
             }
             if (opcao.equals("2")) {
