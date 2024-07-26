@@ -33,6 +33,22 @@ public class Amigo implements Comparable<Amigo> {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Amigo amigo = (Amigo) o;
+        return nome.equals(amigo.nome) && email.equals(amigo.email);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = nome.hashCode();
+        result = 31 * result + email.hashCode();
+        return result;
+    }
+
+    @Override
     public int compareTo(Amigo o) {
         return this.nome.compareTo(o.nome);
     }

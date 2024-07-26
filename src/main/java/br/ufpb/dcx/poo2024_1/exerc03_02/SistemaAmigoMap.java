@@ -1,25 +1,26 @@
 package br.ufpb.dcx.poo2024_1.exerc03_02;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import br.ufpb.dcx.poo2024_1.exerc03_02.Exceptions.*;
 
-public class SistemaAmigo {
+public class SistemaAmigoMap {
     private List<Mensagem> mensagens = new ArrayList<>();
-    private List<Amigo> amigos = new ArrayList<>();
+    private Map<String, Amigo> amigos = new HashMap<>();
 
-    public void cadastraAmigo(String nomeAmigo, String emailAmigo) {
-        amigos.add(new Amigo(nomeAmigo, emailAmigo, ""));
+    public void cadastraAmigo(String nomeAmigo, String emailAmigo) throws AmigoJaExisteException {
+        if (amigos.get(emailAmigo) != null) throw new AmigoJaExisteException("Email já existe no sistema!");
+
+        amigos.put(emailAmigo, new Amigo(nomeAmigo, emailAmigo, ""));
     }
     public Amigo pesquisaAmigo(String emailAmigo) throws AmigoInexistenteException {
-        Amigo foundAmigo = null;
+        Amigo amigo = amigos.get(emailAmigo);
+        if (amigo == null) throw new AmigoInexistenteException("Nenhum amigo com este email");
 
-        for (Amigo amigo: amigos) {
-            if (amigo.getEmail().equals(emailAmigo)) foundAmigo = amigo;
-        }
-        if (foundAmigo == null) throw new AmigoInexistenteException("Nenhum amigo com este email.");
-
-        return foundAmigo;
+        return amigo;
     }
 
     public void enviarMensagemParaTodos(String texto, String emailRemetente, boolean ehAnonima) {
