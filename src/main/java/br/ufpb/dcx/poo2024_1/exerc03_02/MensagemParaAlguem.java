@@ -19,4 +19,5 @@ public class MensagemParaAlguem extends Mensagem {
         if (this.ehAnonima()) return "Mensagem para " + this.getEmailDestinatario() + ". Texto: " + this.getTexto();
         return "Mensagem de " + this.getEmailRemetente() + " para " + this.getEmailDestinatario() + ": Mensagem: " + this.getTexto();
     }
+
 }

@@ -1,6 +1,6 @@
 package br.ufpb.dcx.poo2024_1.exerc03_02;
 
-public class Amigo {
+public class Amigo implements Comparable<Amigo> {
     private String nome;
     private String email;
     private String emailAmigoSorteado;
@@ -30,5 +30,10 @@ public class Amigo {
     }
     public void setEmailAmigoSorteado(String emailAmigoSorteado) {
         this.emailAmigoSorteado = emailAmigoSorteado;
+    }
+
+    @Override
+    public int compareTo(Amigo o) {
+        return this.nome.compareTo(o.nome);
     }
 }
