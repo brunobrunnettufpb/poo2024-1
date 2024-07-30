@@ -38,7 +38,7 @@ public class ProgramaArtesanatoRioTinto {
 
             }
             if (opcao.equals("0")) {
-
+                cont = false;
             }
         }
     }
