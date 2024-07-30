@@ -1,5 +1,8 @@
 package br.ufpb.dcx.poo2024_1.exerc03_02;
 
+import br.ufpb.dcx.poo2024_1.exerc03_02.Exceptions.AmigoInexistenteException;
+import br.ufpb.dcx.poo2024_1.exerc03_02.Exceptions.AmigoJaExisteException;
+
 import javax.swing.*;
 import java.util.List;
 
