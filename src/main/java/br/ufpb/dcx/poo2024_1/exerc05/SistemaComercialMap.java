@@ -46,7 +46,7 @@ public class SistemaComercialMap implements SistemaComercial {
     }
 
     public boolean cadastraCliente(Cliente cliente) {
-
+        return false;
     }
 
     @Override
