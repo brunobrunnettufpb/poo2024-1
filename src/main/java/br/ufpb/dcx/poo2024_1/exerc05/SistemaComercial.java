@@ -1,6 +1,8 @@
 package br.ufpb.dcx.poo2024_1.exerc05;
 
 import java.util.Collection;
+import br.ufpb.dcx.poo2024_1.exerc05.Exceptions.*;
+
 public interface SistemaComercial {
     boolean existeProduto(Produto produto);
     Produto pesquisaProduto(String codigoProduto) throws ProdutoNaoExisteException;

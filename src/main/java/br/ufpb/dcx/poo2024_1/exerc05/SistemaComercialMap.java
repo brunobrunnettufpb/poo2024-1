@@ -1,5 +1,9 @@
 package br.ufpb.dcx.poo2024_1.exerc05;
 
+import java.util.HashMap;
+import java.util.Map;
+import br.ufpb.dcx.poo2024_1.exerc05.Exceptions.*;
+
 public class SistemaComercialMap implements SistemaComercial {
     private Map<String, Cliente> clientes;
     private Map<String, Produto> produtos;
@@ -8,6 +12,7 @@ public class SistemaComercialMap implements SistemaComercial {
         this.clientes = new HashMap<String, Cliente>();
         this.produtos = new HashMap<String, Produto>();
     }
+
 
     @Override
     public boolean existeProduto(Produto produto) {
