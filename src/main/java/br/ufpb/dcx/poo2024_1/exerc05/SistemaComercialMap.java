@@ -1,8 +1,7 @@
 package br.ufpb.dcx.poo2024_1.exerc05;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+
 import br.ufpb.dcx.poo2024_1.exerc05.Exceptions.*;
 
 public class SistemaComercialMap implements SistemaComercial {
@@ -51,12 +50,16 @@ public class SistemaComercialMap implements SistemaComercial {
 
     @Override
     public boolean existeCliente(Cliente cliente) {
-        return false;
+        return this.clientes.get(cliente.getId()) != null;
     }
 
     @Override
     public Cliente pesquisaCliente(String id) throws ClienteNaoExisteException {
-        return null;
+        for (Cliente c: this.clientes.values()) {
+            if (c.getId().equals(id)) return c;
+        }
+
+        throw new ClienteNaoExisteException("Cliente de id " + id + " não cadastrado!");
     }
 
     public Collection<Cliente> pesquisaClientesComNomeComecandoCom(String prefixo) {
@@ -65,6 +68,12 @@ public class SistemaComercialMap implements SistemaComercial {
 
     @Override
     public Collection<Produto> pesquisaProdutosDaCategoria(CategoriaProduto categoria) {
-        return null;
+        List<Produto> produtos = new ArrayList<>();
+
+        for (Produto p: this.produtos.values()) {
+            if (p.getCategoria().equals(categoria)) produtos.add(p);
+        }
+
+        return produtos;
     }
 }

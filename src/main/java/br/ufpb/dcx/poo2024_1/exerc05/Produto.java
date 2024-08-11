@@ -13,7 +13,7 @@ public class Produto {
         this.categoria = categoria;
     }
     public Produto() {
-
+        this("","",0.0,0, CategoriaProduto.OUTROS);
     }
 
     public String getCodigo() {
