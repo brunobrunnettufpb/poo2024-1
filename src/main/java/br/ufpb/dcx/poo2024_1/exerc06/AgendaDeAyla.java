@@ -15,13 +15,13 @@ public class AgendaDeAyla implements Agenda {
     }
 
     public boolean cadastraContato(String nome, int dia, int mes) {
-
+        return false;
     }
     public Collection<Contato> pesquisaAniversariantes(int dia, int mes) {
-
+        return null;
     }
     public boolean removeContato(String nome) {
-
+        return false;
     }
 
 }

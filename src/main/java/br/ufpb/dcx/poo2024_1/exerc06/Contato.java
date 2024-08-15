@@ -1,8 +1,9 @@
 package br.ufpb.dcx.poo2024_1.exerc06;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Contato {
+public class Contato implements Serializable {
     private String nome;
     private int diaAniversario;
     private int mesAniversario;
