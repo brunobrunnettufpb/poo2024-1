@@ -1,4 +1,4 @@
-package br.ufpb.dcx.poo2024_1.exerc06;
+package br.ufpb.dcx.poo2024_1.exerc06.gui;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,7 +8,6 @@ public class AgendaGUI extends JFrame {
         setTitle("Agenda de Aniversários");
         setSize(400,200);
         setLocationRelativeTo(null);
-        //setLocation(150,150);
         setResizable(false);
         getContentPane().setBackground(Color.lightGray);
     }

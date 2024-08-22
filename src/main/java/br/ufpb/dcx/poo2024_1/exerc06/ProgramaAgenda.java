@@ -1,5 +1,7 @@
 package br.ufpb.dcx.poo2024_1.exerc06;
 
+import br.ufpb.dcx.poo2024_1.exerc06.gui.AgendaGUI;
+
 import javax.swing.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
