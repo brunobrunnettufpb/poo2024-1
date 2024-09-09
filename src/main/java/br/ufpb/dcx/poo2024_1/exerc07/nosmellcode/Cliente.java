@@ -14,17 +14,17 @@ public class Cliente {
 
     //Classe criada para remover o Smell Code
     public class CEP {
-        private String CEP;
+        private String cep;
 
-        public CEP(String CEP) {
-            this.CEP = CEP;
+        public CEP(String cep) {
+            this.cep = cep;
         }
 
         public int getCodRegiao() {
-            return this.CEP.charAt(0);
+            return this.cep.charAt(0);
         }
         public int getCodSubRegiao() {
-            return this.CEP.charAt(1);
+            return this.cep.charAt(1);
         }
     }
 
