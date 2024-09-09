@@ -12,6 +12,3 @@ public class Produto {
         this.quantidadeEmEstoque = quantidadeEmEstoque;
     }
 }
-
-
-
